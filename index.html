@@ -2,59 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>For Orpa 🌸</title>
+  <title>🌸 For Orpa 🌸</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
     body {
-      background: linear-gradient(135deg, #fbeaff, #e0c3fc);
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-      text-align: center;
-      padding: 60px 20px;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe4ec, #f9f1ff);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
     }
+
+    audio {
+      display: none;
+    }
+
     .card {
       background: white;
-      padding: 40px;
-      max-width: 600px;
-      margin: 0 auto;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 50px 45px;
+      border-radius: 35px;
+      box-shadow: 0 10px 30px rgba(255, 223, 0, 0.3),
+                  0 20px 50px rgba(0, 128, 0, 0.2),
+                  0 0 30px rgba(100, 149, 237, 0.3);
+      max-width: 650px;
+      text-align: center;
+      position: relative;
+      animation: float 6s ease-in-out infinite;
     }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1, p, .quote, .like-you, .special-phrase, .final {
+      opacity: 0;
+      animation: waveIn 2s ease-in-out forwards;
+    }
+
+    h1 { animation-delay: 0.2s; }
+    p:nth-of-type(1) { animation-delay: 0.4s; }
+    p:nth-of-type(2) { animation-delay: 0.6s; }
+    p:nth-of-type(3) { animation-delay: 0.8s; }
+    .quote { animation-delay: 1s; }
+    .like-you { animation-delay: 1.2s; }
+    .special-phrase { animation-delay: 1.4s; }
+    .final { animation-delay: 1.6s; }
+
+    @keyframes waveIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      50% { opacity: 1; transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
     h1 {
-      font-size: 32px;
-      color: #d63384;
-      margin-bottom: 10px;
+      color: #ff9800;
+      font-size: 36px;
+      margin-bottom: 22px;
+      text-shadow: 1px 1px 4px #ffd580;
     }
+
     p {
-      font-size: 18px;
-      margin: 10px 0;
+      font-size: 19px;
+      color: #222;
+      margin: 12px 0;
+      line-height: 1.5;
     }
+
     .quote {
       font-style: italic;
       color: #555;
       margin: 30px 0;
+      font-size: 18px;
+      line-height: 1.6;
     }
+
     .final {
-      font-size: 20px;
-      color: #8e44ad;
+      font-size: 24px;
+      color: #2e8b57;
       font-weight: bold;
       margin-top: 30px;
+      text-shadow: 1px 1px 8px #a0e8d0;
+    }
+
+    .top-flowers, .bottom-flowers {
+      font-size: 36px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      animation: flowerDance 5s ease-in-out infinite;
+    }
+
+    .top-flowers {
+      top: -40px;
+      color: #ffcc00;
+    }
+
+    .bottom-flowers {
+      bottom: -40px;
+      color: #32cd32;
+    }
+
+    @keyframes flowerDance {
+      0% { transform: rotate(0deg) translateY(0); }
+      50% { transform: rotate(3deg) translateY(-10px); }
+      100% { transform: rotate(0deg) translateY(0); }
+    }
+
+    .like-you {
+      font-weight: bold;
+      font-size: 26px;
+      color: #ff69b4;
+      margin-top: 10px;
+    }
+
+    .special-phrase {
+      margin-top: 28px;
+      font-size: 24px;
+      color: #1e90ff;
+      font-weight: bold;
+      text-shadow: 0 0 8px #87cefa;
     }
   </style>
 </head>
 <body>
+
+  <!-- 🎵 Background Music -->
+  <audio autoplay loop id="bgmusic">
+    <source src="iwannabeyours.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="card">
-    <h1>My pretty Orpa,</h1>
-    <p>You came into my life like a breeze, soft and unforgettable.</p>
-    <p>You are a special gift from God to me.</p>
-    <p>Even though we met on Facebook, you became closer than anyone else.</p>
-    
+    <div class="top-flowers">🌸🌼🌷💮🌺🌹🌻🌼🌸</div>
+
+    <h1>My pretty Orpa 💗</h1>
+
+    <p>You came into my life like a breeze — soft, gentle, and unforgettable. 🌸</p>
+    <p>You're a rare flower that bloomed in the garden of my heart. 🌷</p>
+    <p>Even though we met on Facebook, you became closer than anyone else. 💞</p>
+
     <div class="quote">
-      "In the quiet of my thoughts, your smile echoes the loudest."<br/>
-      "Even stars feel shy when you look at them."
+      "In the quiet of my thoughts, your smile echoes the loudest."<br />
+      "Even stars feel shy when you look at them." ✨
     </div>
 
-    <p>I like you — deeply and truly. You're a beautiful soul and you mean a lot to me.</p>
-    <p class="final">I want to be with you forever, Orpa. 💖</p>
+    <p class="like-you">I like you 💖</p>
+
+    <p class="special-phrase">You are a gift from God to me, Orpa 💙</p>
+
+    <p class="final">💐 I want to be with you forever, Orpa. 💐</p>
+
+    <div class="bottom-flowers">🌺💮🌼🌸🌻🌷🌹🌸🌼</div>
   </div>
 </body>
 </html>
