@@ -1,164 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>🌸 For Orpa 🌸</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <title>🌸 For Orpa 🌸</title>  
+  <style>  
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');  body {  
+  margin: 0;  
+  padding: 0;  
+  background: linear-gradient(135deg, #ffe4ec, #f9f1ff);  
+  font-family: 'Poppins', sans-serif;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  min-height: 100vh;  
+  overflow: hidden;  
+}  
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #ffe4ec, #f9f1ff);
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow: hidden;
-    }
+.card {  
+  background: white;  
+  padding: 50px 45px;  
+  border-radius: 35px;  
+  box-shadow: 0 10px 30px rgba(255, 223, 0, 0.3),  
+              0 20px 50px rgba(0, 128, 0, 0.2),  
+              0 0 30px rgba(100, 149, 237, 0.3);  
+  max-width: 650px;  
+  text-align: center;  
+  position: relative;  
+  animation: float 6s ease-in-out infinite;  
+}  
 
-    audio {
-      display: none;
-    }
+@keyframes float {  
+  0%, 100% { transform: translateY(0); }  
+  50% { transform: translateY(-10px); }  
+}  
 
-    .card {
-      background: white;
-      padding: 50px 45px;
-      border-radius: 35px;
-      box-shadow: 0 10px 30px rgba(255, 223, 0, 0.3),
-                  0 20px 50px rgba(0, 128, 0, 0.2),
-                  0 0 30px rgba(100, 149, 237, 0.3);
-      max-width: 650px;
-      text-align: center;
-      position: relative;
-      animation: float 6s ease-in-out infinite;
-    }
+h1 {  
+  color: #ff9800; /* orange */  
+  font-size: 36px;  
+  margin-bottom: 22px;  
+  text-shadow: 1px 1px 4px #ffd580;  
+  animation: fadeIn 1.5s ease-in-out forwards;  
+}  
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+p {  
+  font-size: 19px;  
+  color: #222;  
+  margin: 12px 0;  
+  line-height: 1.5;  
+  animation: fadeIn 2s ease-in-out forwards;  
+}  
 
-    h1, p, .quote, .like-you, .special-phrase, .final {
-      opacity: 0;
-      animation: waveIn 2s ease-in-out forwards;
-    }
+.quote {  
+  font-style: italic;  
+  color: #555;  
+  margin: 30px 0;  
+  font-size: 18px;  
+  line-height: 1.6;  
+  animation: fadeIn 2.5s ease-in-out forwards;  
+}  
 
-    h1 { animation-delay: 0.2s; }
-    p:nth-of-type(1) { animation-delay: 0.4s; }
-    p:nth-of-type(2) { animation-delay: 0.6s; }
-    p:nth-of-type(3) { animation-delay: 0.8s; }
-    .quote { animation-delay: 1s; }
-    .like-you { animation-delay: 1.2s; }
-    .special-phrase { animation-delay: 1.4s; }
-    .final { animation-delay: 1.6s; }
+.final {  
+  font-size: 24px;  
+  color: #2e8b57; /* sea green */  
+  font-weight: bold;  
+  margin-top: 30px;  
+  text-shadow: 1px 1px 8px #a0e8d0;  
+  animation: glow 2.5s infinite alternate;  
+}  
 
-    @keyframes waveIn {
-      0% { opacity: 0; transform: translateY(30px); }
-      50% { opacity: 1; transform: translateY(-5px); }
-      100% { transform: translateY(0); }
-    }
+.top-flowers, .bottom-flowers {  
+  font-size: 36px;  
+  position: absolute;  
+  left: 0;  
+  right: 0;  
+  user-select: none;  
+  pointer-events: none;  
+  animation: flowerRotate 6s linear infinite;  
+}  
 
-    h1 {
-      color: #ff9800;
-      font-size: 36px;
-      margin-bottom: 22px;
-      text-shadow: 1px 1px 4px #ffd580;
-    }
+.top-flowers {  
+  top: -40px;  
+  color: #ffcc00;  
+}  
 
-    p {
-      font-size: 19px;
-      color: #222;
-      margin: 12px 0;
-      line-height: 1.5;
-    }
+.bottom-flowers {  
+  bottom: -40px;  
+  color: #32cd32;  
+  animation-delay: 2s;  
+}  
 
-    .quote {
-      font-style: italic;
-      color: #555;
-      margin: 30px 0;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+@keyframes flowerRotate {  
+  0% { transform: rotate(0deg); }  
+  50% { transform: rotate(2deg); }  
+  100% { transform: rotate(0deg); }  
+}  
 
-    .final {
-      font-size: 24px;
-      color: #2e8b57;
-      font-weight: bold;
-      margin-top: 30px;
-      text-shadow: 1px 1px 8px #a0e8d0;
-    }
+.like-you {  
+  font-weight: bold;  
+  font-size: 26px;  
+  color: #ff69b4; /* hot pink */  
+  margin-top: 10px;  
+  animation: popIn 1.5s ease-in-out;  
+}  
 
-    .top-flowers, .bottom-flowers {
-      font-size: 36px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      animation: flowerDance 5s ease-in-out infinite;
-    }
+.special-phrase {  
+  margin-top: 28px;  
+  font-size: 24px;  
+  color: #1e90ff; /* Dodger Blue */  
+  font-weight: bold;  
+  animation: slideGlow 2.5s ease-in-out forwards;  
+}  
 
-    .top-flowers {
-      top: -40px;
-      color: #ffcc00;
-    }
+/* Animations */  
+@keyframes fadeIn {  
+  0% { opacity: 0; transform: translateY(10px); }  
+  100% { opacity: 1; transform: translateY(0); }  
+}  
 
-    .bottom-flowers {
-      bottom: -40px;
-      color: #32cd32;
-    }
+@keyframes slideGlow {  
+  0% { opacity: 0; transform: translateX(-50px); text-shadow: none; }  
+  100% {  
+    opacity: 1;  
+    transform: translateX(0);  
+    text-shadow: 0 0 8px #87cefa;  
+  }  
+}  
 
-    @keyframes flowerDance {
-      0% { transform: rotate(0deg) translateY(0); }
-      50% { transform: rotate(3deg) translateY(-10px); }
-      100% { transform: rotate(0deg) translateY(0); }
-    }
+@keyframes popIn {  
+  0% { transform: scale(0.5); opacity: 0; }  
+  100% { transform: scale(1); opacity: 1; }  
+}  
 
-    .like-you {
-      font-weight: bold;
-      font-size: 26px;
-      color: #ff69b4;
-      margin-top: 10px;
-    }
+@keyframes glow {  
+  0% { text-shadow: 0 0 5px #00ffcc; }  
+  100% { text-shadow: 0 0 20px #00ffcc; }  
+}
 
-    .special-phrase {
-      margin-top: 28px;
-      font-size: 24px;
-      color: #1e90ff;
-      font-weight: bold;
-      text-shadow: 0 0 8px #87cefa;
-    }
-  </style>
-</head>
-<body>
+  </style>  
+</head>  
+<body>  
+  <div class="card">  
+    <div class="top-flowers">🌸🌼🌷💮🌺🌹🌻🌼🌸</div>  <h1>My pretty Orpa 💗</h1>  
 
-  <!-- 🎵 Background Music -->
-  <audio autoplay loop id="bgmusic">
-    <source src="iwannabeyours.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<p>You came into my life like a breeze — soft, gentle, and unforgettable. 🌸</p>  
+<p>You're a rare flower that bloomed in the garden of my heart. 🌷</p>  
+<p>Even though we met on Facebook, you became closer than anyone else. 💞</p>  
 
-  <div class="card">
-    <div class="top-flowers">🌸🌼🌷💮🌺🌹🌻🌼🌸</div>
+<div class="quote">  
+  "In the quiet of my thoughts, your smile echoes the loudest."<br />  
+  "Even stars feel shy when you look at them." ✨  
+</div>  
 
-    <h1>My pretty Orpa 💗</h1>
+<p class="to-queen">to my queen 💖</p>  
 
-    <p>You came into my life like a breeze — soft, gentle, and unforgettable. 🌸</p>
-    <p>You're a rare flower that bloomed in the garden of my heart. 🌷</p>
-    <p>Even though we met on Facebook, you became closer than anyone else. 💞</p>
+<p class="special-phrase">You are a gift from God to me, Orpa 💙</p>  
 
-    <div class="quote">
-      "In the quiet of my thoughts, your smile echoes the loudest."<br />
-      "Even stars feel shy when you look at them." ✨
-    </div>
+<p class="final">💐 I want to be with you forever, Orpa. 💐</p>  
 
-    <p class="like-you">I like you 💖</p>
+<div class="bottom-flowers">🌺💮🌼🌸🌻🌷🌹🌸🌼</div>
 
-    <p class="special-phrase">You are a gift from God to me, Orpa 💙</p>
-
-    <p class="final">💐 I want to be with you forever, Orpa. 💐</p>
-
-    <div class="bottom-flowers">🌺💮🌼🌸🌻🌷🌹🌸🌼</div>
-  </div>
-</body>
-</html>
+  </div>  
+</body>  
+</html> 
